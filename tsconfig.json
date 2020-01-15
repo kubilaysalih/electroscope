@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "allowJs": true,
+    "checkJs": false,
+    "skipLibCheck": false,
+    "noImplicitAny": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "outDir": "lib",
+    "noEmit": false,
+    "declaration": true,
+    "baseUrl": "./src",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "exclude": [
+    "node_modules",
+    "test",
+    "lib"
+  ]
+}

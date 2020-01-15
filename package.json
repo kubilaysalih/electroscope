@@ -1,0 +1,83 @@
+{
+  "name": "electroscope",
+  "version": "1.0.0",
+  "description": "painless reload for electron main process",
+  "author": "Kubilay Salih <kubilay@kubilay.io> (https://kubilay.io)",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kubilaysalih/electroscope"
+  },
+  "keywords": [
+    "electron",
+    "refresh",
+    "reload"
+  ],
+  "files": [
+    "lib/**/*"
+  ],
+  "types": "lib/index.d.ts",
+  "bin": {
+    "electroscope": "./lib/register.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^12.7.2",
+    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/parser": "^2.16.0",
+    "chalk": "^3.0.0",
+    "chokidar": "^3.3.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0",
+    "typescript": "^3.5.3"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "semi": [
+        "warn",
+        "never"
+      ],
+      "quotes": [
+        "warn",
+        "single"
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "experimentalDecorators": 0,
+      "typescript/no-unused-vars": 0,
+      "@typescript-eslint/explicit-function-return-type": 0,
+      "import/no-extraneous-dependencies": 0,
+      "@typescript-eslint/no-explicit-any": 0
+    }
+  },
+  "eslintIgnore": [
+    "lib"
+  ]
+}
