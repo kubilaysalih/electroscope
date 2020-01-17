@@ -19,7 +19,7 @@ const getElectronPath = () => {
 let electronProcess: ChildProcess
 const electronPath = join(process.cwd(), './node_modules/electron/dist/', getElectronPath())
 
-console.warn(green('Starting electron...'))
+console.log(green('Starting electron...'))
 
 const randomizer = ((new Date().getTime()).toString(36))
 
