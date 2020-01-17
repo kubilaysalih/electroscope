@@ -13,7 +13,8 @@
     "baseUrl": "./src",
     "module": "commonjs",
     "moduleResolution": "node",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "newLine": "lf"
   },
   "exclude": [
     "node_modules",
