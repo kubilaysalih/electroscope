@@ -4,7 +4,8 @@ import { join } from 'path'
 import { green } from 'chalk'
 
 let electronProcess: ChildProcess
-const electronPath = join(process.cwd(), './node_modules/electron/dist/', 'electron')
+let electronPath = join(process.cwd(), './node_modules/.bin/electron')
+if (process.platform === 'win32') electronPath += '.cmd'
 
 console.warn(green('Starting electron...'))
 
