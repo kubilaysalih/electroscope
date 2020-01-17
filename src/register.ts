@@ -3,9 +3,21 @@ import { spawn, ChildProcess } from 'child_process'
 import { join } from 'path'
 import { green } from 'chalk'
 
+const getElectronPath = () => {
+  const platform = process.platform
+  switch (platform) {
+    case 'darwin':
+      return 'Electron.app/Contents/MacOS/Electron'
+    case 'freebsd':
+    case 'linux':
+      return 'electron'
+    case 'win32':
+      return 'electron.exe'
+  }
+}
+
 let electronProcess: ChildProcess
-let electronPath = join(process.cwd(), './node_modules/.bin/electron')
-if (process.platform === 'win32') electronPath += '.cmd'
+const electronPath = join(process.cwd(), './node_modules/electron/dist/', getElectronPath())
 
 console.warn(green('Starting electron...'))
 

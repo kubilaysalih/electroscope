@@ -1,6 +1,6 @@
 {
   "name": "electroscope",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "painless reload for electron main process",
   "author": "Kubilay Salih <kubilay@kubilay.io> (https://kubilay.io)",
   "main": "lib/index.js",
